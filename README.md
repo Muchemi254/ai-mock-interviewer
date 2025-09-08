@@ -17,6 +17,7 @@ A cloud-native AI-powered mock interview system that conducts timed interviews b
 ### Microservices Design
 
 The system is built with 12 independent microservices:
+
 - API Gateway & Authentication
 - JD-CV Processor
 - Question Engine
@@ -43,34 +44,37 @@ The system is built with 12 independent microservices:
 
 ### Phase Completion Status
 
-| Phase | Name | Status | Completion Date |
-|-------|------|:------:|-----------------|
-| 0 | Foundation Setup | ✅ Complete | YYYY-MM-DD |
-| 1 | Core Content Processing | 🚧 In Progress | - |
-| 2 | Question Intelligence | ⏳ Pending | - |
-| 3 | Session Management | ⏳ Pending | - |
-| 4 | Audio Processing | ⏳ Pending | - |
-| 5 | Intelligence Services | ⏳ Pending | - |
-| 6 | Analytics & Admin | ⏳ Pending | - |
+| Phase | Name                    |     Status     | Completion Date |
+| ----- | ----------------------- | :------------: | --------------- |
+| 0     | Foundation Setup        | 🚧 In Progress | -               |
+| 1     | Core Content Processing |   ⏳ Pending   | -               |
+| 2     | Question Intelligence   |   ⏳ Pending   | -               |
+| 3     | Session Management      |   ⏳ Pending   | -               |
+| 4     | Audio Processing        |   ⏳ Pending   | -               |
+| 5     | Intelligence Services   |   ⏳ Pending   | -               |
+| 6     | Analytics & Admin       |   ⏳ Pending   | -               |
 
 **Overall Progress: 15%** (as of YYYY-MM-DD)
 
 ### Detailed Phase Status
 
 #### ✅ Phase 0: Foundation Setup (Complete)
-- [x] Database schemas created and tested
-- [x] Shared models and utilities available
-- [x] Basic authentication working
-- [x] Gemini client functional with simple test
-- [x] Docker compose environment working
+
+- [ ] Database schemas created and tested
+- [X] Shared models and utilities available
+- [X] Basic authentication working
+- [X] Gemini client functional with simple test
+- [X] Docker compose environment working
 
 #### 🚧 Phase 1: Core Content Processing (In Progress - 40%)
-- [x] Basic file parsing (PDF, DOCX, TXT)
+
+- [ ] Basic file parsing (PDF, DOCX, TXT)
 - [ ] Skill extraction using Gemini
 - [ ] Embeddings generation and storage
 - [ ] JD-CV matching algorithms
 
 #### ⏳ Phase 2: Question Intelligence (Pending)
+
 - [ ] Question generation with Gemini
 - [ ] Question selection and time allocation algorithms
 - [ ] Question bank management and templates
