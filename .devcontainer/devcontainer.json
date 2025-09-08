@@ -1,0 +1,14 @@
+{
+    "name": "AI Mock Interviewer",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "api-gateway",
+    "workspaceFolder": "/workspace",
+    "settings": {
+      "python.defaultInterpreterPath": "/usr/local/bin/python"
+    },
+    "extensions": [
+      "ms-python.python",
+      "ms-python.vscode-pylance"
+    ]
+  }
+  

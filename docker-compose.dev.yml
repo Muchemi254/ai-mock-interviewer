@@ -1,0 +1,14 @@
+# docker-compose.dev.yml
+version: '3.8'
+
+# This file can be used for development-specific overrides
+# e.g., volume mounts for live code reloading, different logging, etc.
+# Currently, it just extends the base compose file.
+# Run with: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  api-gateway:
+    # Example: Mount code for live reloading (requires app to support it)
+    # volumes:
+    #   - ./backend/services/api-gateway:/app
+    # command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload

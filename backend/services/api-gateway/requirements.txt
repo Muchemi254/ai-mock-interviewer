@@ -1,0 +1,14 @@
+fastapi>=0.100.0,<0.101.0
+uvicorn[standard]>=0.22.0,<0.23.0
+pydantic>=2.0.0,<3.0.0
+pydantic-settings>=2.0.0,<3.0.0
+sqlalchemy>=2.0.0,<3.0.0
+asyncpg>=0.28.0,<0.29.0 # For async Postgres
+redis>=4.5.0,<5.0.0
+python-jose[cryptography]>=3.3.0,<4.0.0
+passlib[bcrypt]>=1.7.4,<2.0.0
+python-multipart>=0.0.6,<0.0.7 # For file uploads
+httpx>=0.24.0,<0.25.0 # For making requests to other services
+# google-generativeai>=0.1.0 # For Gemini integration (install later)
+# Add other dependencies as needed
+email-validator>=2.0.0,<3.0.0

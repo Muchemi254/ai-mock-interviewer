@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-common"
+version = "0.1.0"
+description = "Shared utilities for AI Mock Interviewer microservices"
+authors = [{ name="Your Name", email="you@example.com" }]
+dependencies = []

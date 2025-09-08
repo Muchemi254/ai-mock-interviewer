@@ -1,0 +1,9 @@
+# backend/services/llm-orchestrator/requirements.txt
+fastapi>=0.100.0,<0.101.0
+uvicorn[standard]>=0.22.0,<0.23.0
+pydantic>=2.0.0,<3.0.0
+pydantic-settings>=2.0.0,<3.0.0
+google-generativeai>=0.4.0,<0.5.0
+openai>=1.3.0,<2.0.0 # Add OpenAI library
+# httpx>=0.24.0,<0.25.0 # If this service needs to call other internal services
+python-multipart>=0.0.6,<0.0.7
