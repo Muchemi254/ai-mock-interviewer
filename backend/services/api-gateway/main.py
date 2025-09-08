@@ -4,9 +4,14 @@ from fastapi.middleware.cors import CORSMiddleware # Add if needed
 from fastapi.security import OAuth2PasswordRequestForm
 from contextlib import asynccontextmanager
 import logging
-from common import models, auth, database, redis_client, logging_config
-from common.config import settings
 from routes import auth as auth_routes # Import route handlers
+
+from contextlib import asynccontextmanager
+from common import database, redis_client, logging_config # Import database
+from common.config import settings
+
+# Setup logging
+logger = logging_config.setup_logging()
 
 # Setup logging
 logger = logging_config.setup_logging()
@@ -52,7 +57,7 @@ async def health_check():
     # Check database connection
     try:
         # Simple check - replace with actual DB ping if needed
-        db_url = database.get_database_url()
+        db_url = settings.database_url  # Replace with the correct way to get the database URL
         logger.info(f"Database URL configured: {db_url.split('@')[-1] if '@' in db_url else 'OK'}")
     except Exception as e:
         logger.error(f"Database health check failed: {e}")

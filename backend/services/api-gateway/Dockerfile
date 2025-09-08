@@ -8,7 +8,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 
 # Copy the rest of the application code
+# Make /app visible as a package root
 COPY . .
+ENV PYTHONPATH=/app
+
+
 
 EXPOSE 8000
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uvicorn", "services.api-gateway.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

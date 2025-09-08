@@ -12,3 +12,5 @@ httpx>=0.24.0,<0.25.0 # For making requests to other services
 # google-generativeai>=0.1.0 # For Gemini integration (install later)
 # Add other dependencies as needed
 email-validator>=2.0.0,<3.0.0
+alembic>=1.10.0,<2.0.0
+psycopg2-binary>=2.9.0,<3.0.0 # PostgreSQL driver

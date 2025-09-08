@@ -114,4 +114,3 @@ async def delete_openai_chat_session(
 
 # @router.post("/sessions", tags=["LLM Chat"]) # For creating a session with a system prompt upfront
 # async def create_openai_chat_session(...)
-openai_client: Optional['OpenAIChatClient'] = None
