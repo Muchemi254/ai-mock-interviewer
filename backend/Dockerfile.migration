@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install dependencies
+COPY services/api-gateway/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy Alembic config
+COPY alembic/ ./alembic/
+COPY alembic.ini .
+
+# Copy models (so Alembic can autogenerate migrations)
+COPY common/ ./common/
+
+# By default, just upgrade the DB (revision is triggered in docker-compose override)
+CMD ["alembic", "upgrade", "head"]

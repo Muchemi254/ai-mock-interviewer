@@ -82,13 +82,28 @@ services:
   migrate-db:
     build:
       context: ./backend
-      dockerfile: Dockerfile
-    command: ["alembic", "upgrade", "head"]
+      dockerfile: Dockerfile.migration
+    command: >
+      bash -c "
+        alembic revision --autogenerate -m 'auto' || true &&
+        alembic upgrade head
+      "
     environment:
       - DATABASE_URL=${DATABASE_URL}
+    volumes:
+      - ./backend:/app
     depends_on:
       postgres:
         condition: service_healthy
+    restart: "no"
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+    - "8080:8080"
+    depends_on:
+    - postgres
+
 volumes:
   postgres_data:
   redis_data:
