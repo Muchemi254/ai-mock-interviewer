@@ -88,10 +88,6 @@ The system is built with 12 independent microservices:
 
 [API documentation will be linked here as services are completed]
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](docs/development/contributing.md) for details.
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
